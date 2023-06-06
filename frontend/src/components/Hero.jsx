@@ -1,4 +1,5 @@
 import { Container, Card, Button } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Hero = () => {
   return (
@@ -10,14 +11,13 @@ const Hero = () => {
             This is a demo app for MERN stack authentication
           </Card.Text>
           <div className="heroButtons">
-            <Button variant="primary" href="/register">
-              Register
-            </Button>
-            <span className="px-2"></span>
+            <LinkContainer to="/login">
+              <Button variant="primary">Login</Button>
+            </LinkContainer>
             <br></br>
-            <Button variant="primary" href="/login">
-              Login
-            </Button>
+            <LinkContainer to="/signup">
+              <Button variant="primary">Register</Button>
+            </LinkContainer>
           </div>
         </Card.Body>
       </Card>

@@ -1,11 +1,14 @@
+import { Outlet } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Header from "./components/header";
-import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
     <>
       <Header />
-      <HomeScreen />
+      <Container>
+        <Outlet />
+      </Container>
     </>
   );
 }
